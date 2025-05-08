@@ -1,0 +1,27 @@
+[project]
+name = "python-useful-tools"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "oukoutdam",email = "outdam.ouk103@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pyside6 (>=6.9.0,<7.0.0)",
+    "pillow (>=11.2.1,<12.0.0)",
+    "qrcode[pil] (>=8.2,<9.0)",
+]
+
+[tool.poetry]
+packages = [{include = "python_useful_tools", from = "src"}]
+package-mode = false
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.8"
+pyinstaller = "^6.13.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
